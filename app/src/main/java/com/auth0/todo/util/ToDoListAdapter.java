@@ -19,6 +19,7 @@ public class ToDoListAdapter extends BaseAdapter {
     public ToDoListAdapter(Context context) {
         toDoList.add("My first task");
         toDoList.add("My second task");
+
         inflater = LayoutInflater.from(context);
     }
 
@@ -48,5 +49,9 @@ public class ToDoListAdapter extends BaseAdapter {
     @Override
     public int getCount() {
         return toDoList.size();
+    }
+
+    public void addItem(String newItem) {
+        toDoList.add(newItem);
     }
 }
