@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">To-Do List</string>
+    <string name="to_do_message">Describe your to-do item</string>
+    <string name="button_insert">Insert</string>
 </resources>
