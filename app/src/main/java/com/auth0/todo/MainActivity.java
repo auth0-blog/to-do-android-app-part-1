@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         // create and configure the adapter
         this.toDoListAdapter = new ToDoListAdapter(this);
-        ListView microPostsListView = findViewById(R.id.micro_posts);
+        ListView microPostsListView = findViewById(R.id.to_do_items);
         microPostsListView.setAdapter(toDoListAdapter);
     }
 }
