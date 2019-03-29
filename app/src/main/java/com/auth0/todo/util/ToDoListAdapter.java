@@ -49,4 +49,9 @@ public class ToDoListAdapter extends BaseAdapter {
     public int getCount() {
         return toDoList.size();
     }
+
+    public void addItem(String newItem) {
+        toDoList.add(newItem);
+        notifyDataSetChanged();
+    }
 }
