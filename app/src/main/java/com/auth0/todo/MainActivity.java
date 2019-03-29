@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openToDoForm(View view) {
-        startActivityForResult(new Intent(this, ToDoForm.class), 1);
+        startActivityForResult(new Intent(this, ToDoFormActivity.class), 1);
     }
 
     @Override
