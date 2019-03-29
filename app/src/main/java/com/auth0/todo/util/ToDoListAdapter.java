@@ -1,8 +1,6 @@
 package com.auth0.todo.util;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +17,8 @@ public class ToDoListAdapter extends BaseAdapter {
     private List<String> toDoList = new ArrayList<>();
 
     public ToDoListAdapter(Context context) {
-        Activity activity = (Activity) context;
-        List<String> toDoList = activity.getIntent().getStringArrayListExtra("to-do-list");
-        if (toDoList != null) {
-            this.toDoList = toDoList;
-        } else {
-            this.toDoList.add("My first task");
-            this.toDoList.add("My second task");
-        }
+        toDoList.add("My first task");
+        toDoList.add("My second task");
 
         inflater = LayoutInflater.from(context);
     }
@@ -59,7 +51,7 @@ public class ToDoListAdapter extends BaseAdapter {
         return toDoList.size();
     }
 
-    public List<String> getToDoList() {
-        return toDoList;
+    public void addItem(String newItem) {
+        toDoList.add(newItem);
     }
 }
