@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.auth0.todo.identity.AuthAwareActivity;
 
-public class ToDoFormActivity extends AppCompatActivity {
+public class ToDoFormActivity extends AuthAwareActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
