@@ -1,13 +1,13 @@
 package com.auth0.todo;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import com.auth0.todo.identity.AuthAwareActivity;
 import com.auth0.todo.util.ToDoListAdapter;
 import android.content.Intent;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AuthAwareActivity {
     private ToDoListAdapter toDoListAdapter;
 
     @Override
@@ -22,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openToDoForm(View view) {
-        startActivityForResult(new Intent(this, ToDoFormActivity.class), 1);
+        if (authenticationHandler.hasValidCredentials()) {
+            startActivityForResult(new Intent(this, ToDoFormActivity.class), 1);
+        }
     }
 
     @Override
