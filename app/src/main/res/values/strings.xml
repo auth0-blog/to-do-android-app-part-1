@@ -2,4 +2,8 @@
     <string name="app_name">To-Do List</string>
     <string name="to_do_message">Describe your to-do item</string>
     <string name="button_insert">Insert</string>
+    <string name="login">Log In</string>
+    <string name="logout">Log Out</string>
+    <string name="com_auth0_client_id">1yDJcCp3Te28bgPUXrqFVSgt07ZJyk3h</string>
+    <string name="com_auth0_domain">blog-samples.auth0.com</string>
 </resources>
