@@ -23,9 +23,7 @@ public class MainActivity extends AuthAwareActivity {
     }
 
     public void openToDoForm(View view) {
-        if (authenticationHandler.hasValidCredentials()) {
-            startActivityForResult(new Intent(this, ToDoFormActivity.class), 1);
-        }
+        startActivityForResult(new Intent(this, AliensGoHome.class), 1);
     }
 
     @Override
